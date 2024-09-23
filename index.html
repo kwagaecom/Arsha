@@ -388,6 +388,60 @@ textarea.f-field {
 <!-- Bootstrap 5 JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: space-between; /* Space between videos */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center; /* Align vertically */
+  }
+
+  .video-item {
+    flex: 1 1 23%; /* Adjust width to fit 4 videos in a row */
+    margin: 0 1%; /* Space between videos */
+  }
+
+  .video-item iframe {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 250px; /* Adjust max height to fit your design */
+    border: none;
+  }
+</style>
+
+<section id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" align="center">
+    <!-- First Video -->
+    <div class="carousel-item active">
+     <iframe width="697" height="392" src="https://www.youtube.com/embed/qAAMQT3k49I" title="Start Your School In 75000 | Disruptive Business Model | Dr Vivek Bindra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Second Video -->
+    <div class="carousel-item">
+    <iframe width="697" height="392" src="https://www.youtube.com/embed/6DUxIwvyd9A" title="School Kholne ka Easy Plan - How to Open a School? स्कूल खोलने का आसान तरीका!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Third Video -->
+    <div class="carousel-item">
+      <iframe width="697" height="392" src="https://www.youtube.com/embed/tCSel_N9Sd0" title="How to start a private school | Private school kaise khole | गांव में स्कूल कैसे खोलें ?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Fourth Video -->
+    <div class="carousel-item">
+     <iframe width="697" height="392" src="https://www.youtube.com/embed/ONOZBilNVTg" title="How To Open Schools In India- School Business Plan, School Business Profits,New Business Ideas 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+ <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</section>
 
 
 
@@ -441,11 +495,11 @@ textarea.f-field {
           <li><i class="ri-check-double-line"></i> Experienced and dedicated faculty</li>
           <li><i class="ri-check-double-line"></i> Comprehensive curriculum with a focus on STEM, arts, and sports</li>
           <li><i class="ri-check-double-line"></i> Safe and inclusive environment for all students</li>
-          <li><i class="ri-check-double-line"></i> Inclusive and supportive community</li>
-           <li><i class="ri-check-double-line"></i> Experienced and dedicated faculty</li>
-          <li><i class="ri-check-double-line"></i> Comprehensive curriculum with a focus on STEM, arts, and sports</li>
-          <li><i class="ri-check-double-line"></i> Safe and inclusive environment for all students</li>
-          <li><i class="ri-check-double-line"></i> Inclusive and supportive community</li>
+          <li><i class="ri-check-double-line"></i>  Dedicated section with admission requirements, application forms.</li>
+           <li><i class="ri-check-double-line"></i> Modern Facilities and Technology.</li>
+          <li><i class="ri-check-double-line"></i> Personalized Learning.</li>
+          <li><i class="ri-check-double-line"></i> Values-Based Education</li>
+          <li><i class="ri-check-double-line"></i> Extracurricular Opportunities</li>
         </ul>
       </div>
       
@@ -851,7 +905,7 @@ textarea.f-field {
   <div class="container" data-aos="fade-up">
     <div class="section-title">
       <h2>Faculty</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
+      <p>Meet our dedicated and highly qualified teaching staff, committed to nurturing and guiding our students to success.</p>
     </div>
 
     <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -871,9 +925,9 @@ textarea.f-field {
               <img src="assets/img/team/team-1.jpg" class="img-fluid rounded-circle" alt="Walter White, Chief Executive Officer">
             </div>
             <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi.</p>
+              <h4>Ramesh</h4>
+              <span>Principal</span>
+              <p>With over 20 years of educational leadership, Mr. Smith ensures that our school thrives academically and socially.</p>
               <div class="social">
                 <a href="#" aria-label="Twitter Profile"><i class="ri-twitter-fill"></i></a>
                 <a href="#" aria-label="Facebook Profile"><i class="ri-facebook-fill"></i></a>
@@ -890,9 +944,9 @@ textarea.f-field {
               <img src="assets/img/team/team-2.jpg" class="img-fluid rounded-circle" alt="Sarah Jhonson, Product Manager">
             </div>
             <div class="member-info">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-              <p>Aut maiores voluptates amet et quis praesentium qui senda para.</p>
+              <h4>Sharmila</h4>
+              <span>Math Teacher</span>
+              <p>Mrs. Johnson brings a passion for numbers and innovative teaching methods to her classroom, inspiring students to excel in mathematics</p>
               <div class="social">
                 <a href="#" aria-label="Twitter Profile"><i class="ri-twitter-fill"></i></a>
                 <a href="#" aria-label="Facebook Profile"><i class="ri-facebook-fill"></i></a>
@@ -909,9 +963,9 @@ textarea.f-field {
               <img src="assets/img/team/team-3.jpg" class="img-fluid rounded-circle" alt="William Anderson, CTO">
             </div>
             <div class="member-info">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia.</p>
+              <h4>Dev</h4>
+              <span>Science Teacher</span>
+              <p>Mr. Lee is known for making science fun and engaging, encouraging students to explore the wonders of the natural world.</p>
               <div class="social">
                 <a href="#" aria-label="Twitter Profile"><i class="ri-twitter-fill"></i></a>
                 <a href="#" aria-label="Facebook Profile"><i class="ri-facebook-fill"></i></a>
@@ -928,9 +982,9 @@ textarea.f-field {
               <img src="assets/img/team/team-4.jpg" class="img-fluid rounded-circle" alt="Amanda Jepson, Accountant">
             </div>
             <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <p>Dolorum tempora officiis odit laborum officiis et et accusamus.</p>
+              <h4>Kritika</h4>
+              <span>English Teacher</span>
+              <p>Mrs. Wilson brings literature to life in her classroom, encouraging students to develop a love for reading and writing.</p>
               <div class="social">
                 <a href="#" aria-label="Twitter Profile"><i class="ri-twitter-fill"></i></a>
                 <a href="#" aria-label="Facebook Profile"><i class="ri-facebook-fill"></i></a>
@@ -2138,7 +2192,7 @@ iframe.goog-te-menu-frame {
   <div>
     <b>Contact:</b> +91 12345 67890 
     <span style="margin-left: 20px;">
-      <b>Email:</b> <a href="mailto:contact@yummy.com">contact@yummy.com</a>
+      <b>Email:</b> <a href="mailto:contact@ourschool.com">contact@ourschool.com</a>
     </span>
   </div>
 </div>
