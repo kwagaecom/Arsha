@@ -253,32 +253,140 @@ socialShareButtons.forEach(function (button) {
 </div>
 </section>
 
-<!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
     <section class="container d-flex align-items-center">
-        <!---<h1 class="logo me-auto"><a href="index.html">School</a></h1>---->
+        <div class="logo-container" style="background-color:blue; text-align: center;">
+            <img src="your-logo.png" alt="Logo" style="background-color: transparent; border: none; height: 10vh; width: auto;">
+        </div>
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                 <li><a class="nav-link scrollto" href="#about">About</a></li>
-                <li><a class="nav-link scrollto" href="#school-gallery">Gallery</a></li>
-                <li><a class="nav-link scrollto" href="#portfolio">Showcase</a></li>
-                <li><a class="nav-link scrollto" href="#faculty">Faculty</a></li>
-               <div class="logo-container" style="background-color:blue; text-align: center;">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhazVl2El-qqj2fITi0SAlqcepTJmy7vy5fX21oqKwlBbSt7QvoQXGTI5Gl60lhpWmcGPqxiSJALRgRpaDLUQBS8twQcXWbgE4RxaMkTletcE1xR_GnUhZsuVb1WLp0zLzYXY8FXY-s6ZXPMADpOnH8iRg5nm4Keq2A4d1mQqEYdEGvQIIc40pns30yHHX_/s320/image_2024-09-23_194956266.png" height="100px" alt="Logo" style="background-color: transparent; border: none;">
-</div>
-
-                <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-                <li><a class="nav-link scrollto" href="#review">Review</a></li>
-                <li><a class="nav-link scrollto" href="#admission">Admission</a></li>
-                <li><a class="nav-link scrollto" href="#fee">Fee-Structure</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <li><a class="getstarted scrollto" href="#about">Start</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+            <i class="bi bi-list mobile-nav-toggle" id="sidebarToggle"></i>
+        </nav>
     </section>
 </header>
+
+<!-- Sidebar HTML -->
+<div id="sidebar" class="sidebar">
+    <button id="closeSidebar" class="close-sidebar">&times;</button> <!-- Close button -->
+    <div class="logo">
+        <img src="your-logo.png" alt="Logo">
+    </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<style>
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    position: relative;
+    z-index: 1000; /* Keep header on top */
+    background-color: #111;
+    color: white;
+    padding: 0px;
+    width: 100%;
+ height: 10px;
+}
+
+.logo-container img {
+    height: 50px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #111;
+    padding-top: 60px;
+    transition: 0.3s;
+    overflow-x: hidden;
+    z-index: 999; /* Make sure sidebar stays behind the header */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+/* Close button styling */
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar toggle button for mobile */
+.sidebar-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+
+    /* Adjustments for mobile sidebar */
+    .sidebar {
+        padding-top: 60px;
+    }
+}
+</style>
+<script>
+// Toggle sidebar open/close
+document.getElementById('sidebarToggle').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('open');
+});
+
+// Close sidebar when clicking the close button
+document.getElementById('closeSidebar').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.remove('open');
+});
+
+// Close sidebar after clicking any link
+document.querySelectorAll('.sidebar ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.getElementById('sidebar').classList.remove('open');
+    });
+});
+</script>
+
 <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
