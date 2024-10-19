@@ -465,60 +465,89 @@ textarea.f-field {
 </style>
 
 <div class="d-flex justify-content-center">
-    <button type="button" id="openFormBtn" class="btn btn-danger">Request a Callback</button>
+    <button class="apply-btn" data-bs-toggle="modal" data-bs-target="#inquiryModal5">Request Call Back</button>
 </div>
 
 <!-- Modal Structure -->
-<div id="callbackModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <div class="hero-form">
-      <div class="title-wrapper d-flex">
-        <h3 class="form-title">Request a Callback</h3>
-      </div>
-      <p class="form-text">Fill out the form below, and a school representative will contact you at your preferred time.</p>
-      <div class="form-callback">
-        <form action="">
-           <div class="form-item">
-            <select name="service_required" class="f-field" aria-label="Service Required" required>
-              <optgroup label="Service Required*">
+
+<div class="modal fade" id="inquiryModal5" tabindex="-1" aria-labelledby="inquiryModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h7 class="modal-title" id="inquiryModalLabel5"> <h6 ><button type="button" class="btn btn-warning btn-sm"> Request </button><button type="button" class="btn btn-info btn-sm"> Call Back</button></h6></h7>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-image: url('https://media.istockphoto.com/id/1924129781/photo/businessman-hand-using-smartphone-and-tick-correct-sign-mark-for-accept-or-approve-request.webp?a=1&b=1&s=612x612&w=0&k=20&c=_QONylwRMDfbuexYVrbNzKSHGEqMsPf05a4I-7qRA4w='); background-size: cover; background-position: center;">
+                  <p>Fill out the form below, and a school representative will contact you at your preferred time.</p>
+                    <div class="icon">   <i class="fas fa-request"></i></div>
+             <form id="enquiryFormGrade6to8">
+          <!-- Parent's Name -->
+          <div class="row">
+          <div class="col">
+            <label for="parentName" class="form-label">Parent's Name</label>
+            <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="col">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Phone Number -->
+          <div class="col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Child's Name -->
+          <div class="col">
+            <label for="childName" class="form-label">Child's Name</label>
+            <input type="text" class="form-control" id="childName" placeholder="Enter your child's name" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Child's Grade -->
+         <div class="col">
+           <label for="grade" class="form-label">Select Service</label>
+            <select class="form-select" id="grade" required>
+              <option value="" disabled selected>Select a service</option>
                 <option value="enrollment_inquiry">Enrollment Inquiry</option>
                 <option value="school_tour">School Tour</option>
                 <option value="general_query">General Query</option>
-              </optgroup>
             </select>
-            <select name="when_required" class="f-field" aria-label="When is it for?" required>
-              <optgroup label="When is it for?*">
+          </div>
+ <div class="col">
+           <label for="grade" class="form-label">Select Time</label>
+            <select class="form-select" id="grade" required>
+              <option value="" disabled selected>Select a time</option>
                 <option value="asap">As Soon As Possible</option>
                 <option value="within_a_week">Within a Week</option>
                 <option value="later">Later</option>
-              </optgroup>
             </select>
           </div>
-          <div class="form-item">
-            <input type="text" class="f-field" name="full_name" placeholder="Full Name*" aria-label="Full Name" required>
-            <input type="text" class="f-field" name="suburb" placeholder="Suburb*" aria-label="Suburb" required>
+       </div>   
+          <!-- Fee Inquiry Option -->
+        <div class="col">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+          
           </div>
-          <div class="form-item">
-            <input type="email" class="f-field" name="email" placeholder="Email*" aria-label="Email" required>
-            <input type="tel" class="f-field" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number*" aria-label="Phone Number" required>
+
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="messageGrade6to8" class="form-label">Message / Enquiry</label>
+            <textarea class="form-control" id="messageGrade6to8" rows="4" placeholder="Enter your enquiry or message" required></textarea>
           </div>
-          <div class="form-item">
-            <input type="date" class="f-field" name="preferred_date" aria-label="Preferred Date" required>
-            <input type="time" class="f-field" name="preferred_time" aria-label="Preferred Time" required>
-          </div>
-         
-          <div class="submit-btn d-flex">
-            <input type="submit" value="Submit" class="btn">
-            
-          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Submit Enquiry</button>
         </form>
-      </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-
 <!-- JavaScript to Open/Close Modal -->
 <script>
   const modal = document.getElementById('callbackModal');
@@ -1214,10 +1243,10 @@ textarea.f-field {
 <!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
-<section id="fee" class="fee-structure">
+<section id="services" class="fee-structure">
   <div class="container">
     <div class="section-title">
-      <h2>Fee Structure</h2>
+      <h2>Services</h2>
       <p>Find the fee details for different grade levels below.</p>
     </div>
 
@@ -1233,7 +1262,7 @@ textarea.f-field {
             <li>Library Fee</li>
             <li>Miscellaneous Charges</li>
           </ul>
-          <a href="#" class="details-btn">View Details</a>
+          <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal1"><span class="badge rounded-pill bg-primary">Enquiry Now</span></a>
         </div>
       </div>
 
@@ -1248,7 +1277,7 @@ textarea.f-field {
             <li>Lab Charges</li>
             <li>Miscellaneous Charges</li>
           </ul>
-          <a href="#" class="details-btn">View Details</a>
+           <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal2"><span class="badge rounded-pill bg-danger">Enquiry Now</span></a>
         </div>
       </div>
 
@@ -1264,13 +1293,245 @@ textarea.f-field {
             <li>Exam Fee</li>
             <li>Miscellaneous Charges</li>
           </ul>
-          <a href="#" class="details-btn">View Details</a>
+           <a href="#" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#inquiryModal3"><span class="badge rounded-pill bg-dark">Enquiry Now</span></a>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="modal fade" id="inquiryModal1" tabindex="-1" aria-labelledby="inquiryModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h7 class="modal-title" id="inquiryModalLabel1"> <h6 ><button type="button" class="btn btn-warning btn-sm"> Enquiry About  </button><button type="button" class="btn btn-info btn-sm"> Nursery to Grade 5 Fees</button></h6></h7>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-image: url('https://plus.unsplash.com/premium_photo-1677675634231-70bbe246db1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmVlcyUyMGVucXVpcnl8ZW58MHx8MHx8fDA%3D'); background-size: cover; background-position: center;">
+                    <div class="icon">   <i class="fas fa-fee"></i></div>
+               <form id="enquiryForm">
+          <!-- Parent's Name -->
+          <div class="row">
+          <div class="col">
+            <label for="parentName" class="form-label">Parent's Name</label>
+            <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="col">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Phone Number -->
+          <div class="col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Child's Name -->
+          <div class="col">
+            <label for="childName" class="form-label">Child's Name</label>
+            <input type="text" class="form-control" id="childName" placeholder="Enter your child's name" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Child's Grade -->
+         <div class="col">
+            <label for="grade" class="form-label">Child's Grade</label>
+            <select class="form-select" id="grade" required>
+              <option selected disabled>Select Grade</option>
+              <option value="nursery">Nursery</option>
+              <option value="1">Grade 1</option>
+              <option value="2">Grade 2</option>
+              <option value="3">Grade 3</option>
+              <option value="4">Grade 4</option>
+              <option value="5">Grade 5</option>
+            </select>
+          </div>
+
+          <!-- Fee Inquiry Option -->
+          <div class="col">
+            <label for="feeType" class="form-label">Type of Fee Inquiry</label>
+            <select class="form-select" id="feeType" required>
+              <option selected disabled>Select Fee Type</option>
+              <option value="tuition">Tuition Fee</option>
+              <option value="activity">Activity Fee</option>
+              <option value="library">Library Fee</option>
+              <option value="miscellaneous">Miscellaneous Charges</option>
+              <option value="all">All Fees</option>
+            </select>
+          </div>
+</div>
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Message / Enquiry</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your enquiry or message" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Submit Enquiry</button>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="inquiryModal2" tabindex="-1" aria-labelledby="inquiryModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h7 class="modal-title" id="inquiryModalLabel2"> <h6 ><button type="button" class="btn btn-warning btn-sm"> Enquiry About  </button><button type="button" class="btn btn-info btn-sm"> Grade 6 to Grade 8 Fees</button></h6></h7>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-image: url('https://plus.unsplash.com/premium_photo-1677675634231-70bbe246db1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmVlcyUyMGVucXVpcnl8ZW58MHx8MHx8fDA%3D'); background-size: cover; background-position: center;">
+                    <div class="icon">   <i class="fas fa-fee"></i></div>
+             <form id="enquiryFormGrade6to8">
+          <!-- Parent's Name -->
+          <div class="row">
+          <div class="col">
+            <label for="parentName" class="form-label">Parent's Name</label>
+            <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="col">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Phone Number -->
+          <div class="col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Child's Name -->
+          <div class="col">
+            <label for="childName" class="form-label">Child's Name</label>
+            <input type="text" class="form-control" id="childName" placeholder="Enter your child's name" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Child's Grade -->
+         <div class="col">
+            <label for="gradeGrade6to8" class="form-label">Child's Grade</label>
+            <select class="form-select" id="gradeGrade6to8" required>
+              <option selected disabled>Select Grade</option>
+              <option value="6">Grade 6</option>
+              <option value="7">Grade 7</option>
+              <option value="8">Grade 8</option>
+            </select>
+          </div>
+
+          <!-- Fee Inquiry Option -->
+        <div class="col">
+            <label for="feeTypeGrade6to8" class="form-label">Type of Fee Inquiry</label>
+            <select class="form-select" id="feeTypeGrade6to8" required>
+              <option selected disabled>Select Fee Type</option>
+              <option value="tuition">Tuition Fee</option>
+              <option value="activity">Activity Fee</option>
+              <option value="library">Library Fee</option>
+              <option value="miscellaneous">Miscellaneous Charges</option>
+              <option value="all">All Fees</option>
+            </select>
+          </div>
+</div>
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="messageGrade6to8" class="form-label">Message / Enquiry</label>
+            <textarea class="form-control" id="messageGrade6to8" rows="4" placeholder="Enter your enquiry or message" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Submit Enquiry</button>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="inquiryModal3" tabindex="-1" aria-labelledby="inquiryModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h7 class="modal-title" id="inquiryModalLabel3"> <h6 ><button type="button" class="btn btn-warning btn-sm"> Enquiry About  </button><button type="button" class="btn btn-info btn-sm"> Grade 9 to Grade 12</button></h6></h7>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-image: url('https://plus.unsplash.com/premium_photo-1677675634231-70bbe246db1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmVlcyUyMGVucXVpcnl8ZW58MHx8MHx8fDA%3D'); background-size: cover; background-position: center;">
+                    <div class="icon">   <i class="fas fa-fee"></i></div>
+             <form id="enquiryFormGrade6to8">
+          <!-- Parent's Name -->
+          <div class="row">
+          <div class="col">
+            <label for="parentName" class="form-label">Parent's Name</label>
+            <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="col">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Phone Number -->
+          <div class="col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Child's Name -->
+          <div class="col">
+            <label for="childName" class="form-label">Child's Name</label>
+            <input type="text" class="form-control" id="childName" placeholder="Enter your child's name" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Child's Grade -->
+         <div class="col">
+           <label for="gradeGrade9to12" class="form-label">Child's Grade</label>
+            <select class="form-select" id="gradeGrade9to12" required>
+              <option selected disabled>Select Grade</option>
+              <option value="9">Grade 9</option>
+              <option value="10">Grade 10</option>
+              <option value="11">Grade 11</option>
+              <option value="12">Grade 12</option>
+            </select>
+          </div>
+
+          <!-- Fee Inquiry Option -->
+        <div class="col">
+           <label for="feeTypeGrade9to12" class="form-label">Type of Fee Inquiry</label>
+            <select class="form-select" id="feeTypeGrade9to12" required>
+              <option selected disabled>Select Fee Type</option>
+              <option value="tuition">Tuition Fee</option>
+              <option value="activity">Activity Fee</option>
+              <option value="library">Library Fee</option>
+              <option value="miscellaneous">Miscellaneous Charges</option>
+              <option value="all">All Fees</option>
+            </select>
+          </div>
+</div>
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="messageGrade6to8" class="form-label">Message / Enquiry</label>
+            <textarea class="form-control" id="messageGrade6to8" rows="4" placeholder="Enter your enquiry or message" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Submit Enquiry</button>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
 <style>
 .fee-structure {
   padding: 60px 0;
@@ -1414,11 +1675,90 @@ textarea.f-field {
                     </div>
                     <div class="general-info">
                         <p><strong>Note:</strong> Admissions are based on seat availability and meeting the eligibility criteria. Early application is recommended to secure a place. For further details, please contact our admission office or visit our website.</p>
-                        <button class="apply-btn">Apply Now</button>
+                        <button class="apply-btn" data-bs-toggle="modal" data-bs-target="#inquiryModal4">Apply Now</button>
                     </div>
                 </div>
             </div>
         </div>
+<div class="modal fade" id="inquiryModal4" tabindex="-1" aria-labelledby="inquiryModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h7 class="modal-title" id="inquiryModalLabel4"> <h6 ><button type="button" class="btn btn-warning btn-sm"> Admission </button><button type="button" class="btn btn-info btn-sm"> Application Form </button></h6></h7>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-image: url('https://plus.unsplash.com/premium_photo-1679920911003-25995bf42ead?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWRtaXNzaW9uJTIwYXBwbGljYXRpb24lMjBmb3JtfGVufDB8fDB8fHww'); background-size: cover; background-position: center;">
+                    <div class="icon">   <i class="fas fa-fee"></i></div>
+             <form id="enquiryFormGrade6to8">
+          <!-- Parent's Name -->
+          <div class="row">
+          <div class="col">
+            <label for="parentName" class="form-label">Parent's Name</label>
+            <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="col">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Phone Number -->
+          <div class="col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <!-- Child's Name -->
+          <div class="col">
+            <label for="childName" class="form-label">Child's Name</label>
+            <input type="text" class="form-control" id="childName" placeholder="Enter your child's name" required>
+          </div>
+</div>
+<div class="row">
+          <!-- Child's Grade -->
+         <div class="col">
+           <label for="grade" class="form-label">Child's Grade</label>
+            <select class="form-select" id="grade" required>
+              <option selected disabled>Select Grade</option>
+              <option value="nursery">Nursery</option>
+              <option value="kg">Kindergarten</option>
+              <option value="1">Grade 1</option>
+              <option value="2">Grade 2</option>
+              <option value="3">Grade 3</option>
+              <option value="4">Grade 4</option>
+              <option value="5">Grade 5</option>
+              <option value="6">Grade 6</option>
+              <option value="7">Grade 7</option>
+              <option value="8">Grade 8</option>
+              <option value="9">Grade 9</option>
+              <option value="10">Grade 10</option>
+              <option value="11">Grade 11</option>
+              <option value="12">Grade 12</option>
+            </select>
+          </div>
+
+          <!-- Fee Inquiry Option -->
+        <div class="col">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+          
+          </div>
+</div>
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="messageGrade6to8" class="form-label">Message / Enquiry</label>
+            <textarea class="form-control" id="messageGrade6to8" rows="4" placeholder="Enter your enquiry or message" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Submit Enquiry</button>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- School Infrastructure Section -->
         <div class="col-md-6">
